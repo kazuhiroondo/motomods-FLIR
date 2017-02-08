@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent service = new Intent(ModManager.ACTION_BIND_MANAGER);
         service.setComponent(ModManager.MOD_SERVICE_NAME);
-        this.bindService(service, mConnection, Context.BIND_AUTO_CREATE);
+        mContext.bindService(service, mConnection, Context.BIND_AUTO_CREATE);
 
         IntentFilter filter = new IntentFilter(ModManager.ACTION_MOD_ATTACH);
         filter.addAction(ModManager.ACTION_MOD_DETACH);
